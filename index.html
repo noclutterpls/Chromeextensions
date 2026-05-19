@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClipboardCleaner – Chrome Extension</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#121a2b;
+      --muted:#94a3b8;
+      --text:#e5e7eb;
+      --accent:#4f46e5;
+      --accent2:#22c55e;
+      --border:#1f2a44;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+
+    a{color:inherit}
+
+    .wrap{
+      max-width:1000px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    /* HERO */
+    .hero{
+      padding:70px 20px;
+      text-align:left;
+      border-bottom:1px solid var(--border);
+      background:linear-gradient(180deg, #0b1220, #0e1630);
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:3rem;
+      letter-spacing:-1px;
+    }
+
+    .hero p{
+      max-width:650px;
+      color:var(--muted);
+      font-size:1.1rem;
+      margin-top:10px;
+    }
+
+    .cta-row{
+      margin-top:25px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:12px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:white;
+    }
+
+    .btn.secondary{
+      border:1px solid var(--border);
+      color:var(--text);
+    }
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:16px;
+      margin-top:30px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px;
+    }
+
+    h2{
+      margin-top:0;
+      font-size:1.2rem;
+    }
+
+    ul,ol{
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    p{color:var(--muted)}
+
+    /* PRICING */
+    .pricing{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .price-box{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:20px;
+    }
+
+    .price{
+      font-size:2rem;
+      margin:10px 0;
+    }
+
+    .tag{
+      display:inline-block;
+      font-size:0.8rem;
+      padding:4px 8px;
+      border-radius:999px;
+      background:#1f2a44;
+      color:var(--muted);
+    }
+
+    /* FOOTER */
+    footer{
+      margin-top:60px;
+      padding:40px 20px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    .legal{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .small{
+      font-size:0.85rem;
+      color:var(--muted);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="tag">Chrome Extension</span>
+      <h1>ClipboardCleaner</h1>
+      <p>
+        Clean clipboard text in one click. It removes empty lines and keeps only what matters.
+        No setup. No noise. Just clean text.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="#">Install for Chrome</a>
+        <a class="btn secondary" href="#pricing">Pricing</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="grid">
+      <div class="card">
+        <h2>What it does</h2>
+        <ul>
+          <li>Removes empty lines instantly</li>
+          <li>Keeps your formatting clean</li>
+          <li>Works directly from the clipboard</li>
+          <li>No tracking, no accounts</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Why people use it</h2>
+        <p>
+          Text from AI tools, docs, or websites often comes with messy spacing.
+          This extension fixes that in seconds.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>How it works</h2>
+        <ol>
+          <li>Copy text anywhere</li>
+          <li>Click the extension icon</li>
+          <li>Paste clean output</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="pricing" style="margin-top:50px;">
+      <h2>Pricing</h2>
+
+      <div class="pricing">
+
+        <div class="price-box">
+          <h3>Lifetime</h3>
+          <div class="price">€10</div>
+          <p>One-time purchase. Unlimited use.</p>
+        </div>
+
+        <div class="price-box">
+          <h3>Subscription</h3>
+          <div class="price">€2 / month</div>
+          <p>Cancel anytime. Full access included.</p>
+        </div>
+
+        <div class="price-box">
+          <h3>Refund</h3>
+          <div class="price">14 days</div>
+          <p>
+            Full refund within 14 days (EU consumer protection applies where applicable).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:50px;">
+
+      <div class="card">
+        <h2>Privacy (DSGVO / GDPR)</h2>
+        <p>
+          No personal data is collected, stored, or transmitted.
+          Everything runs locally inside your browser.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>License</h2>
+        <p>
+          The extension is licensed per user. Redistribution, resale, or reverse engineering is not allowed.
+          One license = one user account/device setup.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Impressum</h2>
+        <p class="small">
+          Responsible for content:<br><br>
+          Your Name / Company<br>
+          Street Address<br>
+          Postal Code, City<br>
+          Country<br><br>
+          Email: your@email.com<br>
+          VAT ID (if applicable): DE123456789
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>ClipboardCleaner – Chrome Extension</div>
+
+      <div class="legal">
+        <div>
+          <strong>Legal Notice</strong>
+          <p class="small">
+            This product is provided “as is” without warranties of any kind.
+          </p>
+        </div>
+
+        <div>
+          <strong>Refund Policy</strong>
+          <p class="small">
+            14-day refund window in accordance with EU consumer law where applicable.
+          </p>
+        </div>
+
+        <div>
+          <strong>Data Protection</strong>
+          <p class="small">
+            Fully local processing. No analytics or tracking.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
